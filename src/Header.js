@@ -11,30 +11,37 @@ import {useSelector} from 'react-redux';
 import {selectUser} from './features/userSlice';
 
 import Headeroption from './Headeroption';
+
+
 function Header() {
+
+ //useSelector() hook to access the user state from the store.
   const user=useSelector(selectUser);
-  console.log(user)
+  //console.log(user)
+
+
   return (
    <div className='header'>
-    <div className='header_left'>
-    <div classname='header_logo'>
-    <img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="shubh"></img>
+      <div className='header_left'>
+          <div classname='header_logo'>
+         <img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="alt"></img>
     
     </div>
-    <div className='header_search'>
-    <SearchIcon/>
-    <input type="text" placeholder="Search"></input>
+
+      <div className='header_search'>
+         <SearchIcon/>
+        <input type="text" placeholder="Search"></input>
     
+      </div>
     </div>
     
-    </div>
     <div className='header_right'>
-    <Headeroption Icon={HomeIcon} title="Home"/>
-    <Headeroption Icon={PeopleAltIcon} title="My Network"/>
-    <Headeroption Icon={BusinessCenterIcon} title="Job"/>
-    <Headeroption Icon={EmailIcon} title="Message"/>
-    <Headeroption Icon={CircleNotificationsIcon} title="Notification"/>
-    <Headeroption avatar={Avatar} title={user.displayName}/>
+       <Headeroption Icon={HomeIcon} title="Home"/>
+       <Headeroption Icon={PeopleAltIcon} title="My Network"/>
+       <Headeroption Icon={BusinessCenterIcon} title="Job"/>
+       <Headeroption Icon={EmailIcon} title="Message"/>
+       <Headeroption Icon={CircleNotificationsIcon} title="Notification"/>
+       <Headeroption avatar={Avatar} title={user.displayName}/>
     
     </div>
    </div>

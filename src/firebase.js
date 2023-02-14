@@ -12,7 +12,7 @@ const firebaseConfig = {
   appId: "1:758512601241:web:b35f99eaf9dbfe43955008",
   measurementId: "G-17JN2GT5N7"
 };
-  //this special line of code here connects everything
+ 
   const firebaseApp=firebase.initializeApp(firebaseConfig);
   //get the firebase databse
   const db=firebaseApp.firestore();

@@ -76,33 +76,30 @@ function Login() {
     
     <div className='loginscreen'>
     <img src="https://www.seekpng.com/png/detail/371-3715298_advertise-on-
-    linkedin-linkedin-logo-no-background.png" alt="shubh"/>
+    linkedin-linkedin-logo-no-background.png" alt="aalltt"/>
     {
         signup===true ? (
-<form onSubmit={register}>
-<input type="text" placeholder="Full Name"  value={name} onChange={e=>setName(e.target.value)}/>
-<input type="text" placeholder="Profile picture Url" value={photoURL}  onChange={e=>setPhotoURL(e.target.value)}/>
-<input type="email" placeholder="Email"  value={email} onChange={e=>setEmail(e.target.value)}/>
-<input type="password" placeholder="Password"  value={password} onChange={e=>setPassword(e.target.value)}/>
-<input type="submit" value="SignUp"/>
-<h4>Already a memeber ? <span onClick={e=>setSignUp(false)}>Login Here</span></h4>
-</form>)
-:
-( 
-<form onSubmit={signIn}>
+    <form onSubmit={register}>
+         <input type="text" placeholder="Full Name"  value={name} onChange={e=>setName(e.target.value)}/>
+         <input type="text" placeholder="Profile picture Url" value={photoURL}  onChange={e=>setPhotoURL(e.target.value)}/>
+         <input type="email" placeholder="Email"  value={email} onChange={e=>setEmail(e.target.value)}/>
+         <input type="password" placeholder="Password"  value={password} onChange={e=>setPassword(e.target.value)}/>
+         <input type="submit" value="SignUp"/>
+         <h4>Already a memeber ? <span onClick={e=>setSignUp(false)}>Login Here</span></h4>
+     </form>)
+ :
+ ( 
+  <form onSubmit={signIn}>
     
-<input type="email" placeholder="Email" value={email} onChange={e=>setEmail(e.target.value)} />
-<input type="password" placeholder="Password" value={password} onChange={e=>setPassword(e.target.value)} />
-<input type="submit" value="Sign In"/>
-<h4>Not a memeber ? <span onClick={e=>setSignUp(true)}>Register Here</span></h4>
-</form>
-)
-    }
-    
-    
-    
-    </div>
-    </>
+    <input type="email" placeholder="Email" value={email} onChange={e=>setEmail(e.target.value)} />
+    <input type="password" placeholder="Password" value={password} onChange={e=>setPassword(e.target.value)} />
+    <input type="submit" value="Sign In"/>
+    <h4>Not a memeber ? <span onClick={e=>setSignUp(true)}>Register Here</span></h4>
+  </form>
+ )
+ }
+  </div>
+  </>
   )
 }
 
